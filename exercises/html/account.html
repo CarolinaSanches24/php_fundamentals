@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Informações de Conta Bancária</h2>
+    <form action="account.php" method="post">
+        <label for="holder">Titular da Conta:</label><br>
+        <input type="text" id="holder" name="holder" required><br><br>
+        <label for="accountNumber">Número da Conta:</label><br>
+        <input type="number" id="accountNumber" name="accountNumber" required><br><br>
+        <label for="balance">Saldo da Conta:</label><br>
+        <input type="number" id="balance" name="balance" required><br><br>
+
+        <input type="submit" value="Exibir Informações">
+    </form>
+</body>
+</html>

@@ -11,7 +11,7 @@ echo $m*100;
 
 $year = $argv[1]??2014;
 
-if($year % 4 == 0){
+if(($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0){
     echo "O ano $year é bissexto";
 
 }else{
