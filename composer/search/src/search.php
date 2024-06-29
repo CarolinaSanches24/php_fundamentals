@@ -1,28 +1,30 @@
 <?php
 
-require '../vendor/autoload.php'; 
+namespace Carolinasanches24;
 
-use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-$client = new Client([
-  
-        "verify"=>false
+class Search {
+    private ClientInterface $httpClient;
+    private Crawler $crawler;
 
-]);
+    // Constructor method
+    public function __construct(ClientInterface $httpClient, Crawler $crawler) {
+        $this->httpClient = $httpClient;
+        $this->crawler = $crawler;
+    }
 
-$result = $client ->request(method:'GET', uri:'https://alura.com.br/cursos-online-programacao/php');
+    public function search(string $url): array {
+        $result = $this->httpClient->request('GET', $url);
+        $html = $result->getBody()->getContents();
+        $this->crawler->addHtmlContent($html);
 
-$html = $result -> getBody();
+        $courses = [];
+        $this->crawler->filter('span.card-curso__nome')->each(function ($node) use (&$courses) {
+            $courses[] = $node->text();
+        });
 
-
-//instance Crawler 
-
-$crawler = new Crawler();
-$crawler ->addHtmlContent($html);
-
-$courses = $crawler -> filter(selector:'span.card-curso__nome');
-
-foreach($courses as $course){
-    echo $course -> textContent .PHP_EOL;
+        return $courses;
+    }
 }

@@ -1,8 +1,8 @@
 <?php 
 
 require '../vendor/autoload.php'; 
-require '../src/searchClass.php';
 
+use Carolinasanches24\Search;
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 
