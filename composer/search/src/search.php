@@ -5,23 +5,25 @@ namespace Carolinasanches24;
 use GuzzleHttp\ClientInterface;
 use Symfony\Component\DomCrawler\Crawler;
 
-class Search {
-    private ClientInterface $httpClient;
-    private Crawler $crawler;
+class Search
+{
+    private $client;
+    private $crawler;
 
-    // Constructor method
-    public function __construct(ClientInterface $httpClient, Crawler $crawler) {
-        $this->httpClient = $httpClient;
+    public function __construct(ClientInterface $client, Crawler $crawler)
+    {
+        $this->client = $client;
         $this->crawler = $crawler;
     }
 
-    public function search(string $url): array {
-        $result = $this->httpClient->request('GET', $url);
-        $html = $result->getBody()->getContents();
+    public function search(string $url): array
+    {
+        $response = $this->client->request('GET', $url);
+        $html = (string) $response->getBody();
         $this->crawler->addHtmlContent($html);
 
         $courses = [];
-        $this->crawler->filter('span.card-curso__nome')->each(function ($node) use (&$courses) {
+        $this->crawler->filter('.card-curso__nome')->each(function ($node) use (&$courses) {
             $courses[] = $node->text();
         });
 
