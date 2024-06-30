@@ -1,0 +1,28 @@
+{
+    "name": "carolinasanches24/search",
+    "description": "Projeto buscador de cursos",
+    "type": "library",
+    "autoload": {
+        "classmap": [
+            "./src/Test.php"
+        ],
+        "psr-4": {
+            "Carolinasanches24\\": "src/"
+        },
+        "files":["./src/functions.php"]
+    },
+    "authors": [
+        {
+            "name": "CAROL SANCHES",
+            "email": "135077050+CarolinaSanches24@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.8",
+        "symfony/dom-crawler": "^7.1",
+        "symfony/css-selector": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.2"
+    }
+}
