@@ -1,4 +1,19 @@
 {
+  "name": "CarolinaSanches24/php_fundamentals",
+  "description": "Simples buscador de cursos",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name":"Carol Sanches",
+      "email": "carolmosilva34@gmail.cpm"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CarolinaSanches24\\SearchCourse\\":"search"
+    }
+  },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.10",
     "phan/phan": "^5.4",

@@ -3,6 +3,7 @@
 ```bash
 git tag -a v1.0.0
 ```
+[Versionamento Semântico](https://getcomposer.org/doc/articles/versions.md)
 
 <p>Semantic Versioning (Versionamento Semântico) é um sistema para versionar softwares de maneira consistente e significativa. Ele utiliza um formato de versão composto por três números: MAJOR.MINOR.PATCH. Cada um desses números tem um significado específico:
 
