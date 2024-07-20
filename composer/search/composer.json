@@ -27,6 +27,16 @@
     },
     "scripts": {
         "test": "phpunit Tests\\SearchCoursesTest.php",
-        "cs": "phpcs --standard=PSR12 search\\src"
+        "cs": "phpcs --standard=PSR12 search\\src",
+        "check":[
+            "@test",
+            "@cs"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "test":"Run Tests PhpUnit"
     }
 }

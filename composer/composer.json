@@ -1,21 +1,20 @@
 {
-    "require-dev": {
-        "squizlabs/php_codesniffer": "^3.10",
-        "phan/phan": "^5.4",
-        "phpunit/phpunit": "^11.2"
-    },
-   "scripts": {
-        "test": "phpunit Tests\\SearchCoursesTest.php",
-        "cs": "phpcs --standard=PSR12 src/",
-        "phan":"phan --allow-polyfill-parser",
-        "check":[
-            "@test",
-            "@cs",
-            "@phan"
-        ]
-    },
-    "scripts-descriptions": {
-        "check":"Run verify code PHAN,PHPCS,PHUNIT "
-    }
-    
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.10",
+    "phan/phan": "^5.4",
+    "phpunit/phpunit": "^11.2"
+  },
+  "scripts": {
+    "test": "phpunit tests\\TestSoma.php",
+    "cs": "phpcs --standard=PSR12 src/",
+    "phan": "phan --allow-polyfill-parser",
+    "check": [
+      "@phan",
+      "@cs",
+      "@test"
+    ]
+  },
+  "scripts-descriptions": {
+    "test": "Run all tests!"
+  }
 }

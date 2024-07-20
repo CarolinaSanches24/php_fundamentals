@@ -83,3 +83,17 @@ composer check
         "check":"Run verify code PHAN,PHPCS,PHUNIT "
     }
 ```
+
+### Buscar atualizações
+```
+composer update
+```
+
+### Rodar um script pos atualização
+
+```json
+  "post-update-cmd": [
+            "@test"
+        ]
+```
+[Composer Scripts Documentation](https://getcomposer.org/doc/articles/scripts.md)
