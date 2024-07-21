@@ -10,6 +10,9 @@
     }
   ],
   "autoload": {
+    "files":[
+      "functions.php"
+    ],
     "psr-4": {
       "CarolinaSanches24\\SearchCourse\\":"search"
     }
@@ -31,5 +34,6 @@
   },
   "scripts-descriptions": {
     "test": "Run all tests!"
-  }
+  },
+  "bin":["searchCourse.php"]
 }
