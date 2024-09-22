@@ -7,5 +7,7 @@ Create Server PHP Embed
 
 ```
 php -S localhost:8000
+
+path: http://localhost:8000/arquivo.ext
 ```
 

@@ -1,5 +1,5 @@
 <?php
-
+// Array associativo
 $film = [
     "nome" => "Thor :Ragnarok",
     "ano" => 2021,
