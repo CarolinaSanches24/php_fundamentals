@@ -26,8 +26,14 @@ function insertFilm (){
     $films[] = $newfilm;
     file_put_contents($path, json_encode($films, JSON_PRETTY_PRINT));
     echo 'Filme adicionado Corretamente !';
+
+    // Redirect 
+    if (file_put_contents($path, json_encode($films, JSON_PRETTY_PRINT)) !== false) {
+      header('Location: /sucess.php?nome=' . urlencode($newfilm['nome']) . '&ano=' . urlencode($newfilm['ano']) . '&nota=' . urlencode($newfilm['nota']) . '&genero=' . urlencode($newfilm['genero']));
+    exit();
+    } else {
+       echo 'Erro ao salvar os dados do filme.';
+    }
 }
 
-// Redirect 
-header('Location: /sucess.php?filme=' . $film['nome']);
 ?>

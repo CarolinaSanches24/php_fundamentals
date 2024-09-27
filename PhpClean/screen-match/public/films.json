@@ -16,5 +16,35 @@
         "ano": "2001",
         "nota": "10",
         "genero": "Animacao"
+    },
+    {
+        "nome": "Sexta feira muito louca",
+        "ano": "2014",
+        "nota": "7",
+        "genero": "comedia"
+    },
+    {
+        "nome": "teste",
+        "ano": "10",
+        "nota": "5",
+        "genero": "super-heroi"
+    },
+    {
+        "nome": "teste",
+        "ano": "10",
+        "nota": "50",
+        "genero": "comedia"
+    },
+    {
+        "nome": "teste",
+        "ano": "1203",
+        "nota": "10",
+        "genero": "super-heroi"
+    },
+    {
+        "nome": "Homem Aranha",
+        "ano": "2023",
+        "nota": "10",
+        "genero": "super-heroi"
     }
 ]
