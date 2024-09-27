@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>ScreenMatch</title>
+</head>
+<body>
+    <h1 class="text-center fw-bold mb-4 mt-5" style="color: #6a0dad; font-size: 2.5rem;">Exportador do ScreenMatch</h1>
+    <form id="exportForm" action="export_file.php" method="post">
+    <fieldset class="mb-3">
+        <label for="nome">Nome:</label> <br>
+        <input class="form-control" type="text" name="nome" id="nome" autocomplete="off" required>
+    </fieldset>
+
+    <fieldset class="mb-3">
+        <label for="ano">Ano de lançamento:</label> <br>
+        <input class="form-control" type="year" name="ano" id="ano" autocomplete="off" required>
+    </fieldset>
+
+    <fieldset class="mb-3">
+        <label for="nota">Nota:</label> <br>
+        <input class="form-control" type="number" name="nota" id="nota" autocomplete="off" required step="0.1">
+    </fieldset>
+
+    <fieldset class="input-group mb-3 mt-3">
+        <label class="input-group-text" for="genero">Gênero:</label>
+        <select name="genero" id="genero" class="form-select">
+            <option selected>Selecione...</option>
+            <option value="super-heroi">Super-herói</option>
+            <option value="comedia">Comédia</option>
+            <option value="acao">Ação</option>
+            <option value="Animacao">Animação</option>
+        </select>
+    </fieldset>
+    <br>
+    <input class="btn btn-secondary btn-lg w-100" style="background-color: #6a0dad; border-color: #6a0dad;" type="submit" value="Enviar">
+</form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

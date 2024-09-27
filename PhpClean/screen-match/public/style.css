@@ -1,0 +1,19 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #6a0dad;
+    box-shadow: 0 0 5px rgba(106, 13, 173, 0.5); 
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}

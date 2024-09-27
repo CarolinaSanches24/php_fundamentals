@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . "/src/functions.php";
+
 echo "Bem-vindo(a) ao screen match!\n";
 
 $nameFilm = "Top Gun - Maverick";
@@ -9,22 +11,6 @@ $releaseYear = 2022;
 $quantidadeDenotes = $argc - 1;
 $notes = [];
 
-function checkReleaseYear(int $ano): void{
-    $result = match (true) {
-         $ano>2022 => "Esse filme é um lançamento\n",
-         $ano > 2020 && $ano <= 2022 =>"Esse filme ainda é novo\n" ,
-         default => "Esse filme não é um lançamento\n"
-    };
-    echo $result;
-}
-
-checkReleaseYear(2021);
-
-function verifyIncludeInThePlan(bool $planPrime , int $releaseYear):bool{
-
-    $result = $planPrime || $releaseYear < 2020;
-    return $result;
-}
 
 for ($i = 1; $i < $argc; $i++) {
     $notes[] = (float) $argv[$i];
@@ -41,17 +27,29 @@ $genero = match ($nameFilm) {
     default => "gênero desconhecido",
 };
 
+### PARAMETROS NOMEADOS
+$filme = createFilm(nome: "Thor: Ragnarok", ano: 2021, nota:7.8, genero:"super-herói");
 
-$filme = [
-    "nome" => "Thor: Ragnarok",
-    "ano" => 2021,
-    "nota" => 7.8,
-    "genero" => "super-herói",
-];
 
 echo "Nome do filme: " . $nameFilm . "\n";
 echo "Nota do filme: $notaFilme\n";
 echo "Ano de lançamento: $releaseYear\n";
 echo "Incluso no plano: $includedInThePlan\n";
 echo "O gênero do filme é: $genero\n";
-echo $filme["ano"];
+echo $filme["ano"].PHP_EOL;
+checkReleaseYear(2021);
+
+
+echo json_encode($filme);
+var_dump(json_decode('{"nome":"Thor: Ragnarok","ano":2021,"nota":7.8,"genero":"super-her\u00f3i"}',true));
+
+// Write in file 
+
+$filmInJson = json_encode($filme);
+file_put_contents(__DIR__ . '/film.json' , $filmInJson);
+
+//Read in File
+
+$res = file_get_contents(__DIR__ . '/film.json');
+
+var_dump(json_decode($res, true));

@@ -24,6 +24,10 @@ echo "A nota é: $nota, conceito: $conceito";
 
 ```
 
+O uso do true no match (true) ajuda porque o match em PHP foi projetado para comparar valores específicos e não permite diretamente a comparação de expressões booleanas (como $ano > 2022) sem um valor fixo. Quando usamos match (true), estamos dizendo ao PHP que queremos que ele compare cada expressão com true.
+
+Com true: Ao fazer **match (true)**, estamos efetivamente dizendo "verifique qual dessas condições retorna true". Cada condição (como $ano > 2022, $ano > 2020 && $ano <= 2022) retorna um valor booleano (true ou false). O PHP então verifica qual dessas expressões retorna true e usa o valor associado a essa condição.
+
 #### IMPLODE
 
 A função implode() em PHP é usada para juntar os elementos de um array em uma string, separando-os por um delimitador (como uma vírgula, espaço, ou qualquer outro caractere). Essa função é útil quando você tem vários valores em um array e quer exibi-los como uma única string, com os valores separados por algum caractere.
