@@ -16,7 +16,7 @@ for ($i = 1; $i < $argc; $i++) {
     $notes[] = (float) $argv[$i];
 }
 
-$notaFilme = array_sum($notes) / $quantidadeDenotes;
+$noteFilme = array_sum($notes) / $quantidadeDenotes;
 $planPrime = true;
 $includedInThePlan = verifyIncludeInThePlan($planPrime, 2019);
 
@@ -28,15 +28,19 @@ $genero = match ($nameFilm) {
 };
 
 ### PARAMETROS NOMEADOS
-$filme = createFilm(nome: "Thor: Ragnarok", ano: 2021, nota:7.8, genero:"super-herói");
+$filme = createFilm(
+    nome: "Thor: Ragnarok",
+    ano: 2021, 
+    nota:7.8,
+    genero:"super-herói");
 
 
 echo "Nome do filme: " . $nameFilm . "\n";
-echo "Nota do filme: $notaFilme\n";
+echo "Nota do filme: $noteFilme\n";
 echo "Ano de lançamento: $releaseYear\n";
 echo "Incluso no plano: $includedInThePlan\n";
 echo "O gênero do filme é: $genero\n";
-echo $filme["ano"].PHP_EOL;
+echo $filme->year.PHP_EOL;
 checkReleaseYear(2021);
 
 

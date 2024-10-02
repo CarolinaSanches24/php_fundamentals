@@ -18,3 +18,10 @@ Conversão de Caracteres Especiais: A função converte caracteres que têm sign
 & é convertido em &amp;
 " (aspas duplas) é convertido em &quot;
 ' (aspas simples) é convertido em &apos;
+
+
+### Terminal interativo 
+
+```bash 
+php -a 
+```
