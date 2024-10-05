@@ -1,12 +1,12 @@
 <?php
 
+require __DIR__ .'/Model/Gender.php';
 require __DIR__ . "/Model/Film.php";
 
 $filme = new Film(
-
     name: 'Thor - Ragnarok',
     year: 2021,
-    gender: 'super-heroi',
+    gender: Gender::SuperHeroi,
 );
 
 $filme->evaluate(10);

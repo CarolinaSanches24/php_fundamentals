@@ -6,7 +6,7 @@ class Film{
     public function __construct(
         public readonly string $name,
         public readonly int $year,
-        public readonly string $gender)
+        public readonly Gender $gender)
         {
             $this->notes = [];
         }
