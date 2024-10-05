@@ -5,23 +5,30 @@ class Film{
     
     public function __construct(
         public string $name, public int $year,
-        public float $note, public string $gender){}
+        public string $gender)
+        {
+            $this->notes = [];
+        }
 
     public function getYearOfRelease():int
     {
         return $this->year;
     }
-    public function setYearOfRelease(int $newYear ) :void
+
+    public function getName():string
     {
-        $this->year = $newYear;
+        return $this->name;
     }
 
+    public function getGender():string
+    {
+        return $this->gender;
+    }
+    
     public function evaluate(float $note):void
     {
        $this->notes[] = $note;
     }
-
-
 
     public function media():float
     {
