@@ -4,26 +4,12 @@ class Film{
     private array $notes = [];
     
     public function __construct(
-        public string $name, public int $year,
-        public string $gender)
+        public readonly string $name,
+        public readonly int $year,
+        public readonly string $gender)
         {
             $this->notes = [];
         }
-
-    public function getYearOfRelease():int
-    {
-        return $this->year;
-    }
-
-    public function getName():string
-    {
-        return $this->name;
-    }
-
-    public function getGender():string
-    {
-        return $this->gender;
-    }
     
     public function evaluate(float $note):void
     {
