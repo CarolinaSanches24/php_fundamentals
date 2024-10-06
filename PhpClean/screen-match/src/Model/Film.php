@@ -2,6 +2,7 @@
 
 class Film{
     private array $notes = [];
+    private static float $noteMin = 7.5;
     
     public function __construct(
         public readonly string $name,
@@ -11,6 +12,11 @@ class Film{
             $this->notes = [];
         }
     
+    public function good(): bool
+    {
+        return $this->media() > self::$noteMin;
+    }
+
     public function evaluate(float $note):void
     {
        $this->notes[] = $note;

@@ -16,3 +16,9 @@ $filme->evaluate(10);
 var_dump($filme);
 echo $filme->media().PHP_EOL;
 echo $filme->name."\n";
+echo $filme->gender->value .PHP_EOL;
+echo $filme->gender->name .PHP_EOL;
+
+var_dump($filme->gender->itsHorrorMovie());
+var_dump(Gender::from('SuperHeroi'));
+var_dump(Gender::tryFrom('SuperHer'));
