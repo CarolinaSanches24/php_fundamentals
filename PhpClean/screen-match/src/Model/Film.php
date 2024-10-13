@@ -1,32 +1,12 @@
 <?php
 
-class Film{
-    private array $notes = [];
-    private static float $noteMin = 7.5;
-    
+class Film extends Title{
     public function __construct(
-        public readonly string $name,
-        public readonly int $year,
-        public readonly Gender $gender)
+        string $name,
+        int $year,
+        Gender $gender,
+        public readonly int $time)
         {
-            $this->notes = [];
+            parent::__construct($name, $year, $gender);
         }
-    
-    public function good(): bool
-    {
-        return $this->media() > self::$noteMin;
-    }
-
-    public function evaluate(float $note):void
-    {
-       $this->notes[] = $note;
-    }
-
-    public function media():float
-    {
-        $sumNotes = array_sum($this->notes);
-        $countNotes = count($this->notes);
-
-        return $sumNotes/$countNotes;
-    }
 }
