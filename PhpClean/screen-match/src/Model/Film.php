@@ -9,4 +9,9 @@ class Film extends Title{
         {
             parent::__construct($name, $year, $gender);
         }
+
+    #[Override]
+    public function durationInMinutes(): int {
+        return $this->time.PHP_EOL;
+    }
 }

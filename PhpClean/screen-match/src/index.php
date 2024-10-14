@@ -1,9 +1,10 @@
 <?php
+
 require __DIR__ .'/Model/Title.php';
 require __DIR__ .'/Model/Serie.php';
 require __DIR__ .'/Model/Gender.php';
-require __DIR__ . "/Model/Film.php";
-
+require __DIR__ . '/Model/Film.php';
+require __DIR__ .'/Services/MarathonCalculator.php';
 $filme = new Film(
     name: 'Thor - Ragnarok',
     year: 2021,
@@ -32,3 +33,9 @@ $newSerie->evaluate(7.5);
 $newSerie->evaluate(10);
 $result = $newSerie->media();
 echo "Nota de média: $result".PHP_EOL;
+
+$calc = new MarathonCalculator();
+$calc->include($filme);
+$calc->include($newSerie);
+$duration = $calc->duration();
+echo "Para essa maratona, você precisa de $duration minutos \n";

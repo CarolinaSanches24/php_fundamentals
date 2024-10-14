@@ -30,4 +30,9 @@ class Title{
 
         return $sumNotes/$countNotes;
     }
+
+    public function durationInMinutes(): int
+    {
+        return 0;
+    }
 }
