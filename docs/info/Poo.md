@@ -184,3 +184,58 @@ A Reflection API em PHP é um conjunto de ferramentas que permite inspecionar e 
 Para que serve a Reflection API?
 A Reflection API é usada para obter informações detalhadas sobre o código sem precisar conhecê-lo de antemão. Isso é útil em situações onde você precisa lidar com código de terceiros, bibliotecas, frameworks, ou até para construir ferramentas como geradores automáticos de documentação, frameworks de testes, ou sistemas de mapeamento objeto-relacional (ORM).
 
+
+#### Classes abstratas 
+
+- **Métodos abstratos**: São métodos que são declarados, mas não têm implementação. As classes filhas são obrigadas a implementar esses métodos.
+- **Não podem ser instanciadas**: Você não pode criar objetos diretamente de uma classe abstrata. Apenas de suas subclasses.
+- Uma **classe abstrata** descreve como outras classes devem ser,
+ mas você não pode criar objetos diretamente dessa classe.
+ 
+
+#### Traits 
+
+**Traits** em PHP são uma maneira de reutilizar código entre várias classes, permitindo que você compartilhe métodos sem a necessidade de herança.
+
+-  Elas ajudam a evitar duplicação de código.
+
+```php
+<?php
+
+trait AcoesComuns {
+    public function mover() {
+        return "Estou me movendo!";
+    }
+
+    public function emitirSom() {
+        return "Estou fazendo barulho!";
+    }
+}
+
+// Usando a trait em diferentes classes
+class Cachorro {
+    use AcoesComuns;
+}
+
+class Gato {
+    use AcoesComuns; 
+}
+
+// Criando instâncias e chamando os métodos
+$cachorro = new Cachorro();
+echo $cachorro->mover();      
+echo $cachorro->emitirSom();  
+$gato = new Gato();
+echo $gato->mover();          
+echo $gato->emitirSom();     
+
+?>
+
+```
+
+Links Utéis Traits <br>
+[Conflict Resolution](https://www.php.net/manual/en/language.oop5.traits.php#language.oop5.traits.conflict)
+
+
+[Namespaces](https://www.php.net/manual/en/language.namespaces.php)
+
