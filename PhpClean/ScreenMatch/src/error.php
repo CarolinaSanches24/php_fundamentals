@@ -10,6 +10,12 @@ require __DIR__ . '/../autoload.php';
 $serie = new Serie('Stranger Things',2018,Gender::Terror,1,5,10);
 $episode = new Episodes($serie, 'Pilote',1);
 
-$convertion = new ConvertionNoteStars();
-echo $convertion->convertion($episode);
+try{
+    $episode->evaluate(-10);
+    $convertion = new ConvertionNoteStars();
+    echo $convertion->convertion($episode);
+}catch(Throwable $e){
+    echo "Válores inválidos: ". $e->getMessage(). "\nStatus Code:" .$e->getCode().PHP_EOL;
+}
+
 
