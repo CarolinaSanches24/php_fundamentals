@@ -5,7 +5,7 @@ use ScreenMatch\Utils\Evaluate;
 
 class ConvertionNoteStars{
 
-    public function Convertion (Evaluate $eval):float
+    public function convertion (Evaluate $eval):float
     {
         $note = $eval->media();
         return round($note)/2;
