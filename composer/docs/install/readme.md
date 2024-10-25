@@ -1,6 +1,13 @@
 #### Como posso instalar um pacote utilizando o Composer?
 - Executando o comando composer require <pacote>
 - Adicionando no item require do composer.json e executando o comando composer update
+#### Qual o propósito do arquivo autoload
+- o Composer faz o trabalho necessário para definir um autoload de classes de forma que seja possível utilizar as dependências sem incluir seus arquivos separadamente.
+
+Alternativa correta
+
+
+Alternativa correta
 
 #### Install PHPCodeSniffer
 
