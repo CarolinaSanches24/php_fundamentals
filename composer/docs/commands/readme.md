@@ -63,3 +63,15 @@ Exemplo:
   ```json
  { “autoload”: { “psr-4”: { “ Restaurante\\Namespace\\Padrao\\”: “src/php/code/” } } }
   ```
+### Projeto legados 
+
+Projetos legados que não implementam a PSR-4 em sua estrutura de arquivos e possivel utilizar um autoload 
+Com a chave **classmap** conseguimos informar arquivos que contenham classes para que o Composer as encontre mesmo que não sigam a PSR-4.
+
+```json
+{
+    "autoload": {
+        "classmap": ["src/", "lib/", "Something.php"]
+    }
+}****
+```
