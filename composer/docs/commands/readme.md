@@ -75,3 +75,8 @@ Com a chave **classmap** conseguimos informar arquivos que contenham classes par
     }
 }
 ```
+Para gerar o arquivo autoload.php execute na linha de comando:
+
+```bash
+ composer dumpautoload
+```
