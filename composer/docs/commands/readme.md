@@ -33,17 +33,24 @@ E nas duas perguntas sobre as dependências digite no. Por fim, confirma a gera�
 
 ```json
 {
-    "name": "cviniciussdias/buscador-cursos",
-    "description": "Projeto que busca os cursos no site da Alura",
-    "type": "library",
-    "authors": [
-        {
-            "name": "Vinicius Dias",
-            "email": "carlosv775@gmail.com"
-        }
+  "name": "CarolinaSanches24/php_fundamentals",
+  "description": "Simples buscador de cursos",
+  "type": "library",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name":"Carol Sanches",
+      "email": "carolmosilva34@gmail.cpm"
+    }
+  ],
+  "autoload": {
+    "files":[
+      "functions.php"
     ],
-    "require": {}
-}
+    "psr-4": {
+      "CarolinaSanches24\\SearchCourse\\":"search"
+    }
+  }
 ```
 
 ### Autoload 
@@ -82,3 +89,23 @@ Para atualizar o arquivo autoload.php baseado no composer.json, podemos rodar o 
 ```
 
 Para carregar um biblioteca de funções automaticamente, podemos adicionar uma entrada files no composer.json
+
+##### 
+
+Através do flag --dev definimos que uma dependência não faz parte do ambiente de produção
+
+```bash
+composer require --dev <nome do pacote>
+```
+Caso desejarmos baixar as dependências de "produção" apenas podemos usar o flag no-dev
+
+```bash
+composer install --no-dev
+```
+
+Arquivos executáveis fornecidos por componentes instalados pelo composer ficam na pasta vendor/bin
+
+Ferramentas do mundo PHP:
+- phpunit para rodar testes;
+- phpcs para verificar padrões de código;
+- phan para executar uma análise estática da sintaxe do nosso código.
