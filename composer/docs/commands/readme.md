@@ -73,5 +73,5 @@ Com a chave **classmap** conseguimos informar arquivos que contenham classes par
     "autoload": {
         "classmap": ["src/", "lib/", "Something.php"]
     }
-}****
+}
 ```
