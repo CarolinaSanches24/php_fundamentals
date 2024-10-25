@@ -75,8 +75,10 @@ Com a chave **classmap** conseguimos informar arquivos que contenham classes par
     }
 }
 ```
-Para gerar o arquivo autoload.php execute na linha de comando:
+Para atualizar o arquivo autoload.php baseado no composer.json, podemos rodar o comando
 
 ```bash
  composer dumpautoload
 ```
+
+Para carregar um biblioteca de funções automaticamente, podemos adicionar uma entrada files no composer.json
