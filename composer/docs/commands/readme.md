@@ -61,5 +61,5 @@ O Composer consiga realizar o autoload de todos os pacotes em um único código.
 
 Exemplo:
   ```json
-  { “autoload”: { “psr-4”: { “Alura\\Namespace\\Padrao\\”: “src/php/code/” } } }
+ { “autoload”: { “psr-4”: { “Alura\\Namespace\\Padrao\\”: “src/php/code/” } } }
   ```
