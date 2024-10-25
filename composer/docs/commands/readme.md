@@ -14,9 +14,9 @@ Acesse o site https://getcomposer.org e vai para a página do Download. Copie o 
 Depois de executar o script, mova o arquivo composer.phar (sem a extensão) para uma pasta disponível em seu PATH (/usr/local/bin, por exemplo). Resultado: /usr/local/bin/composer
 
 Primeiro projeto
-1) No seu editor de código favorito crie um novo projeto buscador-cursos-alura.
+1) No seu editor de código favorito crie um novo projeto.
 
-2) Na linha de comando entre na pasta do projeto buscador-cursos-alura e digite:
+2) Na linha de comando entre na pasta do projeto e digite:
    
 ```bash
 composer init 
