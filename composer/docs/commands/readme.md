@@ -46,4 +46,20 @@ E nas duas perguntas sobre as dependências digite no. Por fim, confirma a gera�
 }
 ```
 
+### Autoload 
 
+O Composer consiga realizar o autoload de todos os pacotes em um único código.
+
+- Principais pontos da PSR-4
+- Todos os arquivos devem ter como seu nome o nome da classe contida nele e a extensão .php
+- Cada um dos namespaces após o **vendor namespace** deve ser mapeados para uma estrutura de diretórios
+  Exemplo 1: Restaurante\Namespace\Padrao está mapeado para /src/php/code, a classe Restaurante\Namespace\Padrao\Comidas\Sobremesas deve estar no caminho /src/php/code/Comidas/Sobremesas.php.
+
+### Como implementar a PSR4
+
+- Basta adicionar na chave psr-4 filha da chave autoload a chave contendo nosso vendor namespace e o valor contendo nossa pasta base:
+
+Exemplo:
+  ```json
+  { “autoload”: { “psr-4”: { “Alura\\Namespace\\Padrao\\”: “src/php/code/” } } }
+  ```
